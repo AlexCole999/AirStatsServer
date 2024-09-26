@@ -14,5 +14,5 @@ app.post('/submit', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Сервер запущен на http://localhost:${port}`);
+  console.log(`Сервер запущен на http://212.86.101.37:${port}`);
 });
