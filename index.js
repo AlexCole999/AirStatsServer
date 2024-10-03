@@ -11,7 +11,7 @@ app.post('/submit', (req, res) => {
   console.log('Name:', name);
   console.log('Email:', email);
   console.log('Data:', data);
-  console.log(req.body)
+  console.log(req)
 
   // Отправляем ответ
   res.send('Данные получены');
