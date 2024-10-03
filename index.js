@@ -2,17 +2,21 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-// Middleware для парсинга JSON тела запроса
-app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Обработчик POST-запроса
 app.post('/submit', (req, res) => {
-  const params = req.body; // Получаем параметры из тела запроса
-  console.log(params); // Выводим параметры в консоль
+  const { name, email, data } = req.body;
 
-  res.send(params);
+  // Логируем полученные данные
+  console.log('Name:', name);
+  console.log('Email:', email);
+  console.log('Data:', data);
+  console.log(req.body)
+
+  // Отправляем ответ
+  res.send('Данные получены');
 });
 
-app.listen(port, () => {
-  console.log(`Сервер запущен на http://212.86.101.37:${port}`);
+app.listen(3000, () => {
+  console.log('Сервер запущен на порту 3000');
 });
