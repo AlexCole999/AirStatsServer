@@ -5,11 +5,11 @@ const port = 3000;
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/submit', (req, res) => {
-  const { name, email, data } = req.body;
+  const { name, phone, data } = req.body;
 
   // Логируем полученные данные
   console.log('Name:', name);
-  console.log('Email:', email);
+  console.log('Phone:', phone);
   console.log('Data:', data);
   console.log(req.body)
 
