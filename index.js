@@ -14,7 +14,7 @@ app.post('/submit', (req, res) => {
   console.log(req.body)
 
   // Отправляем ответ
-  res.send('Данные получены');
+  res.send('Data transfered success');
 });
 
 app.listen(3000, () => {
