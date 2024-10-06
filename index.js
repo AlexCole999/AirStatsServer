@@ -70,7 +70,7 @@ app.post('/submit', (req, res) => {
     // console.log('noize:', noize)
 
     // // Отправляем ответ
-    // res.send('Data transfered success');
+    res.send('Data transfered success');
   }
   catch { console.log(error) }
 });
