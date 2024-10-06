@@ -8,10 +8,8 @@ app.post('/submit', (req, res) => {
   const { name, phone, data } = req.body;
 
   // Логируем полученные данные
-  console.log('Name:', name);
-  console.log('Phone:', phone);
-  console.log('Data:', data);
   console.log(req.body)
+  console.log('data:', data)
 
   // Отправляем ответ
   res.send('Data transfered success');
